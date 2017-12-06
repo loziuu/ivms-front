@@ -1,0 +1,15 @@
+<h2>Incoming interviews</h2>
+<table class="table">
+  <thead>
+    <th>Date</th>
+    <th>Applicant</th>
+    <th>Job offer</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let int of interviews">
+      <td> {{ int.date }}</td>
+      <td> {{ int.applicant }} </td>
+      <td> {{ int.jobOffer }}</td>
+    </tr>
+  </tbody>
+</table>

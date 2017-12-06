@@ -1,0 +1,25 @@
+<br/>
+<button class="btn btn-outline-primary"> <i class="fa fa-plus"></i> Add new job offer </button>
+<br/>
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let job of jobs">
+      <td>{{ job.name }}</td>
+      <td>{{ job.position }}</td>
+      <td>{{ job.description }}</td>
+      <td>
+        <button class="btn btn-info">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-danger">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
