@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Job offer</th>
+    <th>Job description</th>
+  </thead>
+  <tr *ngFor="let applicant of applicants">
+    <td>{{ applicant.person.firstName }}</td>
+    <td>{{ applicant.person.lastName }}</td>
+    <td>{{ applicant.joboffer.name }}</td>
+    <td>{{ applicant.joboffer.description }}</td>
+    <td><button class="btn btn-info" [routerLink]="['/applicants', applicant.aggregateId]">Enter the void</button></td>
+  </tr>
+</table>

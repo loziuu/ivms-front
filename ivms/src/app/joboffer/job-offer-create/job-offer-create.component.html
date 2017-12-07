@@ -1,0 +1,25 @@
+<div class="alert alert-success" role="alert" *ngIf="isSuccessful">
+  <strong>Job offer created successfully!</strong>
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="isFailure">
+  <strong>Some bad shit happened, man!</strong>
+</div>
+
+<form class="form-group">
+      <label for="name">Name</label>
+      <input [(ngModel)]="joboffer.name" class="form-control" type="text" name="name"/>
+      <label for="position">Position</label>
+      <select [(ngModel)]="joboffer.position" name="position" class="form-control">
+        <option value="JAVA DEVELOPER">DEVELOPER</option>
+        <option value="JAVA DEVELOPER">SENIOR DEVELOPER</option>
+        <option value="JAVA DEVELOPER">JUNIOR DEVELOPER</option>
+        <option value="JAVA DEVELOPER">APPRENTICE</option>
+        <option value="JAVA DEVELOPER">ENGLISH TEACHER</option>
+      </select>
+      <label for="name">Description</label>
+      <textarea [(ngModel)]="joboffer.description" name="description" class="form-control"></textarea>
+      <br/>
+      <button class="btn btn-success" (click)="submit()">Submit</button>
+</form>
+    

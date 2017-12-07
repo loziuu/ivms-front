@@ -1,0 +1,18 @@
+<p>
+  Creating person application
+</p>
+
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let job of jobs" (click)="chosenJob = job" [ngClass]="{ selected : job === chosenJob }">
+      <td>{{ job.name }}</td>
+      <td>{{ job.description }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="submit()">Start</button>

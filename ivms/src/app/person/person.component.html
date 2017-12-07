@@ -18,7 +18,7 @@
         <a [routerLink]="['/people', person.aggregateId]" class="btn btn-outline-primary">
           <i class="fa fa-search-plus"></i>
         </a>
-        <button class="btn btn-success">
+        <button [routerLink]="['/people', person.aggregateId, 'apply']" class="btn btn-success">
           <i class="fa fa-file"></i>
         </button>
       </td>
